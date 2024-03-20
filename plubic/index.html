@@ -4,14 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="assets/css/animetion.css" />
+    <link rel="stylesheet" href="assets/css/inline-class-style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <script
       src="https://kit.fontawesome.com/d1e3e2c8c7.js"
       crossorigin="anonymous"></script>
-    <title>PLUBLISHING COMPANY</title>
-
+    <title>Plublisging Company</title>
+    <script src="assets/javascript/script.js"></script>
   </head>
   <body>
     <div class="navbar">
@@ -48,16 +50,131 @@
     <div class="nav-menu">
       <div class="menu-container">
         <ul class="menu">
-          <li class="nav-item active"><a>Home</a></li>
-          <li class="nav-item"><a>About</a></li>
-          <li class="nav-item"><a>Coming soon</a></li>
-          <li class="nav-item"><a>Top seller</a></li>
-          <li class="nav-item"><a>Books</a></li>
-          <li class="nav-item"><a>Author</a></li>
-          <li class="nav-item"><a>Blog</a></li>
-          <li class="nav-item"><a>Contact</a></li>
+          <li class="nav-item active" id="Home">Home</li>
+          <li class="nav-item" id="About">About</li>
+          <li class="nav-item" id="ComingSoon">Coming soon</li>
+          <li class="nav-item" id="TopSeller">Top seller</li>
+          <li class="nav-item" id="Books">Books</li>
+          <li class="nav-item" id="Author">Author</li>
+          <li class="nav-item" id="Blog">Blog</li>
+          <li class="nav-item" id="Contact">Contact</li>
         </ul>
       </div>
     </div>
+
+    <section class="hero-wrap">
+      <div class="container">
+        <div class="banner">
+          <h1>Good books don't give up all their secrets at once</h1>
+          <p>A small river named Duden flows by their place and supplies it with
+            the necessary regelialia.</p>
+          <div>
+            <button class="btn-default" style="margin-right: 10px;">
+              View All Books
+            </button>
+            <button class="btn-white">
+              Explore Now
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container">
+      <div class="list-container">
+        <div class="container-list-item">
+          <div class="list-item-icon">
+            <div class="list-icon"></div>
+            <div style="z-index: 99;">Image</div>
+
+          </div>
+          <div class="list-item-title">
+            Children's Books
+          </div>
+          <div class="list-item-description">
+            A small river named Duden flows by their place and supplies it with
+            the necessary regelialia.
+          </div>
+        </div>
+
+        <div class="container-list-item">
+          <div class="list-item-icon">
+            <div class="list-icon"></div>
+            <div style="z-index: 99;">Image</div>
+
+          </div>
+          <div class="list-item-title">
+            Romance
+          </div>
+          <div class="list-item-description">
+            A small river named Duden flows by their place and supplies it with
+            the necessary regelialia.
+          </div>
+        </div>
+
+        <div class="container-list-item">
+          <div class="list-item-icon">
+
+            <div class="list-icon"></div>
+            <div style="z-index: 99;">Image</div>
+
+          </div>
+          <div class="list-item-title">
+            Art & Archiecture
+          </div>
+          <div class="list-item-description">
+            A small river named Duden flows by their place and supplies it with
+            the necessary regelialia.
+          </div>
+        </div>
+
+        <div class="container-list-item">
+          <div class="list-item-icon">
+            <div class="list-icon"></div>
+            <div style="z-index: 99;">Image</div>
+
+          </div>
+          <div class="list-item-title">
+            History
+          </div>
+          <div class="list-item-description">
+            A small river named Duden flows by their place and supplies it with
+            the necessary regelialia.
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section style="background-color: #f5f4f0;height: 1500px;">
+      <div class="container">
+        <div class="container-list-number">
+          <div class="list-container list-number number-transition">
+            <div class="list-number-container">
+              <div id="active-reader" class="list-number-title">0</div>
+              <div class="list-number-sub-title">ACTIVE READERS</div>
+            </div>
+          </div>
+          <div class="list-container list-number number-transition">
+            <div class="list-number-container">
+              <div id="total-pages" class="list-number-title">0</div>
+              <div class="list-number-sub-title">TOTAL PAGES</div>
+            </div>
+          </div>
+          <div class="list-container list-number number-transition">
+            <div class="list-number-container">
+              <div id="cup" class="list-number-title">0</div>
+              <div class="list-number-sub-title">CUP OF COFFEE</div>
+            </div>
+          </div>
+          <div class="list-container list-number number-transition">
+            <div class="list-number-container">
+              <div id="fans" class="list-number-title">0</div>
+              <div class="list-number-sub-title">FACEBOOK FANS</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </body>
 </html>
