@@ -169,7 +169,7 @@ ul {
 }
 
 .hero-wrap {
-  background-image: url(/plubic/assets/images/banner.jpg.webp);
+  background-image: url(../images/banner.webp);
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
@@ -350,7 +350,7 @@ ul {
 }
 
 .img-author {
-  background-image: url(/plubic/assets/images/about-1.jpg.webp);
+  background-image: url(../images/about-1.webp);
   background-size: contain;
   background-repeat: no-repeat;
   width: 100%;
