@@ -26,13 +26,10 @@ window.addEventListener("scroll", function () {
 })
 
 document.addEventListener("DOMContentLoaded", function () {
-  const banner = document.getElementsByClassName("banner")
-  banner[0].style.opacity = 1
-  banner[0].style.transform = "translateY(10%)"
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry, index) => {
       if (entry.isIntersecting) {
-        entry.target.classList.add("square-transition")
+        entry.target.classList.add("opacity-show")
         entry.target.classList.add("translateTop")
         entry.target.classList.add(`delay-${index + 1}`)
         return
@@ -54,7 +51,33 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const list_number = document.querySelectorAll(".list-number")
   list_number.forEach((e) => observerListnumber.observe(e))
+
+  const authorObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry, index) => {
+      console.log(entry , 'entry')
+      if (entry.isIntersecting) {
+        entry.target.classList.remove("opacity-hide")
+        entry.target.classList.remove("move-down")
+      }
+    })
+  })
+  const show_item_author = document.querySelectorAll(".author-container")
+  show_item_author.forEach((element) => authorObserver.observe(element))
+
+  // console.log(show_item_author, "show_item_author")
 })
+
+function addCommas(nStr) {
+  nStr += ""
+  x = nStr.split(".")
+  x1 = x[0]
+  x2 = x.length > 1 ? "." + x[1] : ""
+  var rgx = /(\d+)(\d{3})/
+  while (rgx.test(x1)) {
+    x1 = x1.replace(rgx, "$1" + "," + "$2")
+  }
+  return x1 + x2
+}
 
 function animateValue(element, start, end, duration) {
   let obj = document.getElementById(element)
@@ -62,7 +85,7 @@ function animateValue(element, start, end, duration) {
   const step = (timestamp) => {
     if (!startTimestamp) startTimestamp = timestamp
     const progress = Math.min((timestamp - startTimestamp) / duration, 1)
-    obj.innerHTML = Math.floor(progress * (end - start) + start)
+    obj.innerHTML = addCommas(Math.floor(progress * (end - start) + start))
     if (progress < 1) {
       window.requestAnimationFrame(step)
     }

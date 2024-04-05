@@ -30,6 +30,14 @@
   opacity: 1 !important;
 }
 
+.opacity-hide {
+  opacity: 0;
+}
+
+.move-down {
+  transform: translateY(10%);
+}
+
 .translateTop {
   transform: translateY(-30%);
 }

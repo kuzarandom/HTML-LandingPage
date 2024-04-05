@@ -184,14 +184,34 @@ ul {
   display: flex;
   flex-direction: column;
   width: 620px;
-  opacity: 0;
   height: 720px;
   /* align-items: center; */
   /* justify-content: center; */
   margin-bottom: 20px;
   padding-top: 120px;
-  transition: all 0.7s ease-in;
-  transform: translateY(20%);
+  /* transition: all 0.7s ease-in; */
+  animation: MoveUpDown ease 1s, fadeInAnimation ease-in 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  /* transform: translateY(20%); */
+}
+
+@keyframes MoveUpDown {
+  0% {
+    transform: translateY(15%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .banner h1 {
@@ -201,10 +221,6 @@ ul {
   font-weight: 500;
   margin-top: 0px;
   margin-bottom: 0px;
-}
-
-.banner p {
-  /* width: 520px; */
 }
 
 .btn-default {
@@ -331,4 +347,68 @@ ul {
 
 .number-transition {
   transition: all 1s ease-in-out;
+}
+
+.img-author {
+  background-image: url(/plubic/assets/images/about-1.jpg.webp);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+}
+
+.text-author-container {
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+.author-title {
+  color: #ff7a5c;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 3px;
+  margin-bottom: 0px;
+}
+
+.head-author {
+  font-size: 50px;
+  font-weight: 500;
+  margin-top: 0px;
+  margin-bottom: 20px;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.paragraph-author {
+  color: #808080;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.btn-author {
+  padding: 6px 12px !important;
+}
+
+.author-container {
+  transition: all 0.7s ease-in;
+  opacity: 1;
+}
+
+.container-book-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-content-book {
+}
+
+.container-book-release {
+  width: 500px;
+  height: 500px;
+  margin-bottom: 30px;
+  background: #f5f4f0;
+  transition: all 0.3s ease;
+  background-color: red;
 }
