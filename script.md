@@ -8,10 +8,10 @@
   ];
 
   const mapping = [
-    { _variantTier: 0, _eggMoveIndex: 0 },
-    { _variantTier: 1, _eggMoveIndex: 1 },
-    { _variantTier: 2, _eggMoveIndex: 2 },
-    { _variantTier: 0, _eggMoveIndex: 3 },
+    { _variantTier: 0, _eggMoveIndex: 0, _isShiny: true },
+    { _variantTier: 1, _eggMoveIndex: 1, _isShiny: true },
+    { _variantTier: 2, _eggMoveIndex: 2, _isShiny: true },
+    { _variantTier: 0, _eggMoveIndex: 3, _isShiny: false },
   ];
 
   const needed = speciesList.length * 4;
@@ -32,9 +32,9 @@
 
       Object.assign(egg, {
         _tier: 2,
-        _hatchWaves: 1,
+        _hatchWaves: 49,
         _species: species,
-        _isShiny: true,
+        _isShiny: cfg._isShiny,
         _variantTier: cfg._variantTier,
         _eggMoveIndex: cfg._eggMoveIndex,
       });
